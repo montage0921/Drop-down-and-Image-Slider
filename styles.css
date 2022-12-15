@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  top: 10%;
+  padding: 20px;
+  width: 300px;
+  height: 85px;
+  background-color: white;
+  overflow: hidden;
+  transition: height 0.5s;
+  z-index: 1;
+}
+
+.card.visible {
+  height: 400px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.avatarBox {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid lightgrey;
+  margin-right: 15px;
+}
+
+.avatarBox img {
+  width: 80px;
+  height: 80px;
+  object-fit: fill;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.card h2 span {
+  color: grey;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.nav {
+  padding: 0;
+  list-style: none;
+  margin-top: 15px;
+}
+
+.nav li {
+  margin-bottom: 20px;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: grey;
+  font-size: 1.2em;
+  transition: 0.2s;
+}
+
+.nav li a i {
+  margin-right: 15px;
+  font-size: 1.8em;
+}
+
+.nav li a:hover {
+  color: cornflowerblue;
+}
+
+.toggle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  height: 30px;
+  width: 30px;
+  background-color: lightblue;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  position: absolute;
+  top: 30%;
+
+  height: 500px;
+  width: 800px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+
+  height: 100%;
+  width: 100%;
+  transition: transform 1s;
+}
+
+/* .one {
+  transform: translateX(0%);
+}
+
+.two {
+  transform: translateX(100%);
+}
+
+.three {
+  transform: translateX(200%);
+} */
+
+.slide > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.arrow-button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow-button > i {
+  font-size: 1.8rem;
+  color: rgb(255, 255, 255, 0.7);
+}
+
+.button__left {
+  position: absolute;
+  top: 50%;
+  left: 1%;
+}
+
+.button__right {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+}
+
+.dots {
+  color: red;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+
+  background-color: grey;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: white;
+}
